@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:toko_nazkya/menu.dart';
+import 'package:toko_nazkya/screens/menu.dart';
 
 void main() {
   runApp(const MyApp());
