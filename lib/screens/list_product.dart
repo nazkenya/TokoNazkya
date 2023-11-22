@@ -1,10 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:http/http.dart' as http;
-// import 'dart:convert';
-// import 'package:toko_nazkya/models/product.dart';
-// import 'package:toko_nazkya/widgets/left_drawer.dart';
-
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -23,7 +16,7 @@ class _ProductPageState extends State<ProductPage> {
 Future<List<Product>> fetchProduct() async {
     // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
     var url = Uri.parse(
-        'http://<URL_APP_KAMU>/json/');
+        'http://localhost:8000/json/');
     var response = await http.get(
         url,
         headers: {"Content-Type": "application/json"},
