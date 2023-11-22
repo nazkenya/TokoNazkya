@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:toko_nazkya/screens/menu.dart';
 import 'package:toko_nazkya/screens/shoplist_form.dart';
-import 'package:toko_nazkya/screens/lihat_produk.dart';
+import 'package:toko_nazkya/screens/list_product.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -64,17 +64,16 @@ class LeftDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.checklist),
-            title: const Text('Lihat Item'),
+            leading: const Icon(Icons.shopping_basket),
+            title: const Text('Daftar Produk'),
             onTap: () {
-              Navigator.push(
+                // Route menu ke halaman produk
+                Navigator.push(
                 context,
-                MaterialPageRoute(
-                    builder: (context) =>
-                        ProductListPage(items: itemList)),
-              );
+                MaterialPageRoute(builder: (context) => const ProductPage()),
+                );
             },
-          ),
+        ),
         ],
       ),
     );
